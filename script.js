@@ -13,8 +13,10 @@ if (document.getElementById("wff-wa-container")) {
     button.addEventListener("click", () => {
       expanded = true;
 
+      const isMobile = window.innerWidth <= 480;
+
       gsap.to(container, {
-        width: 350,
+        width: isMobile ? 280 : 350,
         height: 520,
         borderRadius: 16,
         duration: 0.4,
